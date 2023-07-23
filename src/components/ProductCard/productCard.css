@@ -1,0 +1,99 @@
+.product-card-container {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 500px;
+  box-shadow: 0 0 5px var(--highlight-light);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+
+  .product-image-container {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    > img {
+      width: 100%;
+      max-height: 100%;
+      mix-blend-mode: multiply;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .product-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    width: 100%;
+  }
+
+  .product-price {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-pink);
+
+    &::before {
+      content: "\20B9";
+      left: 0;
+      top: 0;
+      position: absolute;
+    }
+
+    .qty-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100px;
+
+      > svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .add-to-cart-btn,
+  .remove-from-cart-btn {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: var(--background-dark);
+    outline: none;
+    color: #fff;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    transition: scale, background-color, color 0.5s;
+
+    > svg {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      scale: 0.95;
+      background-color: var(--backgroud-dark);
+      color: var(--text-dark);
+    }
+  }
+
+  .remove-from-cart-btn {
+    background-color: red;
+  }
+}

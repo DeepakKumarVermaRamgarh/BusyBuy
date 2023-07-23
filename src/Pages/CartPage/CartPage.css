@@ -1,0 +1,37 @@
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-pink);
+
+  > button {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--background-dark);
+    outline: none;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: bold;
+
+    &:hover {
+      scale: 0.95;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    > h2 {
+      flex: 1;
+      width: 100%;
+    }
+    >button{
+        flex: 1;
+        width: 100%;
+    }
+  }
+}
